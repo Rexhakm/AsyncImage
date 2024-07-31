@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E41DCF92C53FBAA0058D27B /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E41DCF82C53FBAA0058D27B /* images.json */; };
 		8E41DCFB2C53FCB90058D27B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41DCFA2C53FCB90058D27B /* ImageLoader.swift */; };
 		8E41DD002C5418750058D27B /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41DCFF2C5418750058D27B /* ImageInfo.swift */; };
 		8EEF46192C53EAEA006C9621 /* RoundsTaskAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF46182C53EAEA006C9621 /* RoundsTaskAssignmentApp.swift */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E41DCF82C53FBAA0058D27B /* images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
 		8E41DCFA2C53FCB90058D27B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		8E41DCFF2C5418750058D27B /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
 		8EEF46152C53EAEA006C9621 /* RoundsTaskAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundsTaskAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				8EEF461C2C53EAEC006C9621 /* Assets.xcassets */,
-				8E41DCF82C53FBAA0058D27B /* images.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 			files = (
 				8EEF46202C53EAEC006C9621 /* Preview Assets.xcassets in Resources */,
 				8EEF461D2C53EAEC006C9621 /* Assets.xcassets in Resources */,
-				8E41DCF92C53FBAA0058D27B /* images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

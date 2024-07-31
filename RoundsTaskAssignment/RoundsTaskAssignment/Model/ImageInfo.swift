@@ -8,6 +8,6 @@
 import Foundation
 
 struct ImageInfo: Identifiable, Decodable {
-    let id: String
-    let url: String
+    let id: Int
+    let imageUrl: String
 }

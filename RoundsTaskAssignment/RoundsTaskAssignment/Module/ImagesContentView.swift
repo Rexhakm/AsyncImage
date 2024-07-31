@@ -7,10 +7,13 @@
 
 import SwiftUI
 import RoundsImageLoader
+import Combine
 
 struct ImagesContentView: View {
     @State private var imageItems: [ImageInfo] = []
+    @State private var cancellable: AnyCancellable?
     private let imageCache : ImageCache
+
 
     init(imageCache: ImageCache = ImageCache.shared) {
         self.imageCache = imageCache
@@ -21,7 +24,7 @@ struct ImagesContentView: View {
             VStack {
                 List(imageItems) { item in
                     VStack {
-                        if let url = URL(string: item.url){
+                        if let url = URL(string: item.imageUrl){
                             AsyncImageView(url: url, placeholder: UIImage(named: "placeholder.png"))
                                 .cornerRadius(8)
                         }
@@ -35,9 +38,24 @@ struct ImagesContentView: View {
                 imageCache.invalidateCache()
             })
             .onAppear {
-                imageItems = ImageLoader.loadLocalJSON()
+                loadImages()
             }
         }
+    }
+
+    private func loadImages() {
+        cancellable = ImageLoader.loadFromURL()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print("Error loading images: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { images in
+                imageItems = images
+            })
     }
 }
 
